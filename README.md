@@ -22,7 +22,7 @@ Change with your mongoDB connection string whereever used in php file.
 ## Setup
 1. Download the folder `e_commerce` and have it as the root folder.
 2. Extract `vendor.zip` file in `e_commerce\php` folder with the same name and delete the `vendor.zip` file.
-> insert image here
+![](/images/folder.jpg)
 3. Install **XAMPP** and place the `e_commerce` folder inside `xampp/htdocs/`.
 4. Open **XAMPP** server and start **Apache**. In case of any error try to change the port for **Apache** else refer the online.
 5. Open any browser and type `localhost/e_commerce/home.html` to run the project.
