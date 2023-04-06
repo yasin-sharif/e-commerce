@@ -19,7 +19,7 @@ Create a mongoDB database with necessary databases and collections, each with sp
 Change with your mongoDB connection string whereever used in php file.
 ![](/images/connection.jpg)
 
-## Setup
+## Environment Setup
 1. Download the folder `e_commerce` and have it as the root folder.
 2. Extract `vendor.zip` file in `e_commerce\php` folder with the same name and delete the `vendor.zip` file.
 ![](/images/folder.jpg)
