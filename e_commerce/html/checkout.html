@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-Commerce</title>
+        <!-- online bootstrap and jquery bundle link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <!-- offline files -->
+        <script src="/e_commerce/js/checkout.js"></script>
+        <link href="/e_commerce/css/checkout.css" rel="stylesheet">
+        <link href="/e_commerce/css/global.css" rel="stylesheet">
+    </head>
+    <body onload="load_checkout_details()">
+
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  navbar_colour">
+                <a class="navbar_brand">
+                    E-Commerce
+                    <img src="/e_commerce/assets/e-commerce.png" alt="logo" class="navbar_image">
+                </a>
+
+                <!-- toogle button for navbar on small screen -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+
+                <!-- collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <a href="/e_commerce/home.html" id="home">Home</a>
+                    <form>
+                        <input class="form-control search_bar" type="search" placeholder="Search">
+                    </form>
+                    <button class="btn btn-success ms-3" type="submit">Search</button>
+                </div>
+
+                <!-- user profile area, until sigin it shows the sign in button -->
+                <div id="cart_count"></div>
+                <img src="/e_commerce/assets/cart-icon.png" title="Click to go cart page" onClick="openCartPage()" style="cursor: pointer;" id="cart_icon">
+                <div id="signin">
+                    <button class="btn btn-info">Sign In</button>
+                </div>
+            </div>
+        </nav>
+        
+        
+        <div class="container">
+            <table class="table table-striped table-bordered table-hover mt-5  me-5">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Total Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <!-- content will be added by javascript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <!-- content will be added by javascript -->
+                        <td></td>
+                        <td id="total_sum"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <div class="container">
+            <!-- <form onSubmit="pay()" method="post"> -->
+                <label>Shipping Address</label><br>
+                <textarea rows="4" cols="50" required></textarea><br>
+
+                <label>Payment Method</label><br>
+                <input type="radio" name="pay_option" val="COD" required> Cash On Delivery<br>
+                <input type="radio" name="pay_option" val="Online" required> Online Payment<br>
+
+                <button type="submit" onclick="pay()">Pay</button>
+            <!-- <  /form> -->
+        </div>
+    </body>
+</html>

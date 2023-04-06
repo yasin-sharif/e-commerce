@@ -1,0 +1,22 @@
+.product_title_banner{
+    margin-top: 5vh;
+    background-color: cadetblue;
+    padding:5px;
+}
+.home_mob_img{
+    min-width: 200px;
+    min-height: 200px;
+    width: 10vw;
+    height: 30vh;
+}
+.product_queue{
+    overflow: auto;
+    white-space: nowrap;
+}
+.home_lap_img{
+    min-width: 250px;
+    min-height: 200px;
+}
+.unavailable{
+    opacity: 0.5;
+}
