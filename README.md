@@ -12,9 +12,12 @@ A clone of a typical e-commerce website with functional front-end and back-end. 
 
 ## Database Setup
 Create a mongoDB database with necessary databases and collections, each with specified data structure.
->  insert image
+![](/images/order_history.jpg)
+![](/images/deals.jpg)
+![](/images/customer_credential.jpg)
+![](/images/mobile_details.jpg)
 Change with your mongoDB connection string whereever used in php file.
-> insert image
+![](/images/connection.jpg)
 
 ## Setup
 1. Download the folder `e_commerce` and have it as the root folder.
@@ -25,3 +28,11 @@ Change with your mongoDB connection string whereever used in php file.
 5. Open any browser and type `localhost/e_commerce/home.html` to run the project.
 
 ## Images
+![](/images/home_page_1.jpg)
+![](/images/home_page_2.jpg)
+![](/images/product_1.jpg)
+![](/images/product_2.jpg)
+![](/images/cart_page_1.jpg)
+![](/images/cart_page_2.jpg)
+![](/images/checkout_1.jpg)
+![](/images/login_1.jpg)
