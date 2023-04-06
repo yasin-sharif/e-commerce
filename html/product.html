@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>E-Commerce</title>
+        <!-- online bootstrap and jquery bundle link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <!-- offline files -->
+        <script src="/e_commerce/js/product.js"></script>
+        <link href="/e_commerce/css/product.css" rel="stylesheet">
+        <link href="/e_commerce/css/global.css" rel="stylesheet">
+    </head>
+    <body onload="load_product_detail()">
+
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid  navbar_colour">
+                <a class="navbar_brand">
+                    E-Commerce
+                    <img src="/e_commerce/assets/e-commerce.png" alt="logo" class="navbar_image">
+                </a>
+                <!-- toogle button for navbar on small screen -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+                <!-- collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <a href="/e_commerce/home.html" id="home">Home</a>
+                    <form>
+                        <input class="form-control search_bar" type="search" placeholder="Search">
+                    </form>
+                    <button class="btn btn-success ms-3" type="submit">Search</button>
+                </div>
+
+                <!-- user profile area, until sigin it shows the sign in button -->
+                <div id="cart_count"></div>
+                <img src="/e_commerce/assets/cart-icon.png" title="Click to go cart page" onClick="openCartPage()" style="cursor: pointer;" id="cart_icon">
+                <div id="signin">
+                    <button class="btn btn-info">Sign In</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- contents will be added by javascript with the help of server -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6" id="img">
+                    <!-- product image is loaded here -->
+                </div>
+                <div class="col-6 mt-5">
+                    <!-- product details azre loaded here -->
+                    <h1 id="title"></h1>
+                    <ul id="details"></ul>
+                    <h1 id="stock_count"></h1>
+                </div>
+            </div>
+        
+            <div class="row" id="validate" hidden="true">
+                <button class="btn btn-primary col-1 me-5">+ Add to Wishlist</button>
+                <button class="btn btn-warning col-2 me-5"><div class="my_badge">0</div> Compare</button>
+                <button class="btn btn-success col-1" onClick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </body>
+</html>
